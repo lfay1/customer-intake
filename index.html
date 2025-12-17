@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Recovery Request</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #38bdf8;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      background: #22c55e;
+      color: black;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: #9ca3af;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Data Recovery Request</h1>
+<p>Please describe the issue as clearly as possible.</p>
+
+<form id="intakeForm">
+
+  <label>Your Name</label>
+  <input required>
+
+  <label>Email or Phone</label>
+  <input required>
+
+  <label>Device Type</label>
+  <select>
+    <option>Phone</option>
+    <option>Laptop</option>
+    <option>Tablet</option>
+    <option>External Drive</option>
+    <option>Other</option>
+  </select>
+
+  <label>Device Model (if known)</label>
+  <input>
+
+  <label>What happened to the device?</label>
+  <textarea rows="4" required></textarea>
+
+  <label>What data do you need?</label>
+  <textarea rows="3"></textarea>
+
+  <label>Does the device power on?</label>
+  <select>
+    <option>Unknown</option>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <button type="submit">Submit Request</button>
+
+</form>
+
+<p class="note">
+  This does not guarantee recovery. Devices should NOT be powered on if liquid damaged.
+</p>
+
+<script>
+  document.getElementById("intakeForm").addEventListener("submit", e => {
+    e.preventDefault();
+    alert("Form submitted! (Backend coming next)");
+  });
+</script>
+
+</body>
+</html>
+
