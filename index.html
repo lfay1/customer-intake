@@ -1,85 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Data Recovery Request</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      padding: 20px;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 { text-align: center; }
-    label { display: block; margin-top: 15px; font-weight: bold; }
-    input, select, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      font-size: 16px;
-    }
-    textarea { min-height: 120px; }
-    button {
-      margin-top: 20px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover { background: #0056b3; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DataRecoverX — Data Recovery & Device Repair (Ireland)</title>
+  <meta name="description" content="DataRecoverX provides secure mail-in data recovery and device repair in Ireland. No Recovery, No Fee." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <div class="container">
-    <h1>Data Recovery Request</h1>
-
-    <form action="https://formspree.io/f/xnjaapjl" method="POST">
-
-      <label>Your Name</label>
-      <input type="text" name="customer_name" required>
-
-      <label>Email Address</label>
-      <input type="email" name="email" required>
-
-      <label>Phone Number</label>
-      <input type="tel" name="phone">
-
-      <label>Device Type</label>
-      <select name="device_type" required>
-        <option value="">Select device</option>
-        <option>Phone</option>
-        <option>Laptop</option>
-        <option>Tablet</option>
-        <option>External Drive</option>
-        <option>SSD / NVMe</option>
-        <option>Other</option>
-      </select>
-
-      <label>Device Brand / Model</label>
-      <input type="text" name="device_model">
-
-      <label>Describe the Problem</label>
-      <textarea name="problem_description" required></textarea>
-
-      <input type="hidden" name="_subject" value="New Data Recovery Request">
-      <input type="hidden" name="_captcha" value="false">
-
-      <button type="submit">Submit Request</button>
-
-    </form>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <div class="brand-title">DataRecoverX</div>
+          <div class="brand-sub">Data Recovery • Board Repair • Diagnostics</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="request.html">Request Recovery</a>
+        <a href="shipping.html">Shipping</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <div class="btn-row">
+        <a class="btn" href="faq.html">Help</a>
+        <a class="btn btn-primary" href="request.html">Start Request</a>
+      </div>
+    </div>
   </div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="kicker">🔒 No Recovery, No Fee • 🇮🇪 Ireland-based • 📦 Secure mail-in</div>
+          <h1>We help you get your files back — safely.</h1>
+          <p>
+            DataRecoverX is based in Ireland and specialises in data recovery from dead, damaged, and water-exposed devices.
+            We use a diagnostics-first process and only proceed with recovery work once you approve the plan.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="request.html">Request Data Recovery</a>
+            <a class="btn" href="shipping.html">How to Send Your Device</a>
+          </div>
+
+          <div class="badge-row">
+            <span class="badge">Recovery-First Workflow</span>
+            <span class="badge">Secure Handling</span>
+            <span class="badge">Clear Communication</span>
+          </div>
+
+          <hr>
+
+          <div class="grid">
+            <div class="card">
+              <h3>Common issues we handle</h3>
+              <ul>
+                <li>Liquid / water damage</li>
+                <li>No power / won’t turn on</li>
+                <li>Boot loop / stuck on logo</li>
+                <li>Not charging / port damage symptoms</li>
+                <li>SSD / drive problems</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Devices</h3>
+              <ul>
+                <li>iPhone / Android phones</li>
+                <li>MacBook / Windows laptops</li>
+                <li>Tablets (iPad / Android)</li>
+                <li>External HDD / SSD / NVMe</li>
+                <li>Games consoles (case-by-case)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top:16px" class="notice">
+            If the device was exposed to liquid: <b>do not power on, charge, or attempt to “test it”.</b>
+            Submit a request and follow the Shipping steps.
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>How it works</h3>
+          <ol class="muted" style="margin:10px 0 0; padding-left:18px; line-height:1.7">
+            <li><b>Request</b> — Submit the intake form (2–3 minutes).</li>
+            <li><b>Send</b> — Pack and ship the device securely.</li>
+            <li><b>Diagnostics</b> — We assess recovery options.</li>
+            <li><b>Approval</b> — You approve the plan & cost.</li>
+            <li><b>Recovery</b> — We recover and return data securely.</li>
+          </ol>
+
+          <hr>
+
+          <h3>No Recovery, No Fee</h3>
+          <p class="muted small">
+            You only pay for recovery work if the requested data is successfully recovered.
+            Diagnostic/handling and return-shipping policies are explained before work begins.
+            See <a href="terms.html"><u>Terms</u></a>.
+          </p>
+
+          <div class="badge-row">
+            <span class="badge">Transparent process</span>
+            <span class="badge">Privacy-first</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <b>DataRecoverX</b> — Ireland-based, future-flexible mail-in service.
+        <div class="small muted">© <span id="y"></span> DataRecoverX. All rights reserved.</div>
+      </div>
+      <div class="footer-links">
+        <a href="request.html">Request</a>
+        <a href="shipping.html">Shipping</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+
 
 
 
