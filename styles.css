@@ -1,123 +1,61 @@
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | DataRecoverX</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: #e5e7eb;
-}
+<header>
+  <div class="container">
+    <h1>DataRecoverX</h1>
+    <p class="tagline">Professional Data Recovery • Ireland</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="request.html">Request Recovery</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
 
-a {
-  color: #38bdf8;
-  text-decoration: none;
-}
+<div class="container">
+  <div class="card">
+    <h2>About DataRecoverX</h2>
 
-a:hover {
-  text-decoration: underline;
-}
+    <p>
+      DataRecoverX is an Ireland-based specialist service focused exclusively on
+      professional data recovery.
+    </p>
 
-/* Header */
-header {
-  background: #020617;
-  border-bottom: 1px solid #1e293b;
-}
+    <p>
+      We recover data from phones, laptops, tablets, and storage media including
+      SSDs, hard drives, USB drives, and memory cards.
+    </p>
 
-header .container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
+    <p>
+      Our services cover devices affected by physical damage, liquid exposure,
+      non-booting faults, corruption, and electrical failure.
+    </p>
 
-header h1 {
-  margin: 0;
-  color: #38bdf8;
-}
+    <p>
+      All cases follow a diagnostics-first, no-recovery-no-fee approach. Recovery
+      work only proceeds once options and costs are confirmed.
+    </p>
 
-header .tagline {
-  font-size: 14px;
-  color: #94a3b8;
-}
+    <p>
+      Privacy, security, and careful handling are central to everything we do.
+    </p>
+  </div>
+</div>
 
-nav {
-  margin-top: 10px;
-}
+<footer>© DataRecoverX • Ireland</footer>
 
-nav a {
-  margin-right: 15px;
-  font-size: 14px;
-}
-
-/* Page content */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.card {
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 8px;
-  padding: 30px;
-}
-
-/* Headings */
-h2 {
-  color: #38bdf8;
-}
-
-/* Lists */
-ul {
-  padding-left: 20px;
-}
-
-/* Buttons */
-.button {
-  display: inline-block;
-  background: #38bdf8;
-  color: #020617;
-  padding: 12px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-/* Forms */
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 8px;
-  margin-bottom: 16px;
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 6px;
-  color: #e5e7eb;
-}
-
-form button {
-  background: #38bdf8;
-  color: #020617;
-  padding: 14px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #0ea5e9;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #1e293b;
-  color: #94a3b8;
-  font-size: 13px;
-}
+</body>
+</html>
 
