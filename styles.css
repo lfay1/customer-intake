@@ -1,61 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | DataRecoverX</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0e1621;
+  color: #e6edf3;
+  line-height: 1.6;
+}
 
-<header>
-  <div class="container">
-    <h1>DataRecoverX</h1>
-    <p class="tagline">Professional Data Recovery • Ireland</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="request.html">Request Recovery</a>
-      <a href="shipping.html">Shipping</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </nav>
-  </div>
-</header>
+header {
+  background: #0b1220;
+  padding: 20px 40px;
+  border-bottom: 1px solid #1f2a44;
+}
 
-<div class="container">
-  <div class="card">
-    <h2>About DataRecoverX</h2>
+header h1 {
+  margin: 0;
+  color: #4fd1c5;
+  font-size: 26px;
+}
 
-    <p>
-      DataRecoverX is an Ireland-based specialist service focused exclusively on
-      professional data recovery.
-    </p>
+header p {
+  margin: 5px 0 15px;
+  color: #9fb3c8;
+}
 
-    <p>
-      We recover data from phones, laptops, tablets, and storage media including
-      SSDs, hard drives, USB drives, and memory cards.
-    </p>
+nav a {
+  color: #9fb3c8;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 500;
+}
 
-    <p>
-      Our services cover devices affected by physical damage, liquid exposure,
-      non-booting faults, corruption, and electrical failure.
-    </p>
+nav a:hover {
+  color: #4fd1c5;
+}
 
-    <p>
-      All cases follow a diagnostics-first, no-recovery-no-fee approach. Recovery
-      work only proceeds once options and costs are confirmed.
-    </p>
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-    <p>
-      Privacy, security, and careful handling are central to everything we do.
-    </p>
-  </div>
-</div>
+.card {
+  background: #131c2f;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
 
-<footer>© DataRecoverX • Ireland</footer>
+h2 {
+  color: #ffffff;
+}
 
-</body>
-</html>
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #4fd1c5;
+  color: #0b1220;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #7a8ca5;
+  font-size: 14px;
+}
+
 
