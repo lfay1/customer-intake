@@ -1,179 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>DataRecoverX – Data Recovery Request</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #020617;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #38bdf8;
-      font-size: 28px;
-    }
-
-    header p {
-      margin-top: 6px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 30px auto;
-      background: #020617;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    }
-
-    h2 {
-      color: #e5e7eb;
-      margin-bottom: 10px;
-    }
-
-    .trust {
-      font-size: 13px;
-      color: #94a3b8;
-      margin-bottom: 25px;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: none;
-      background: #0f172a;
-      color: #e5e7eb;
-      font-size: 14px;
-    }
-
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 14px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #020617;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0ea5e9;
-    }
-
-    .info {
-      margin-top: 30px;
-      font-size: 13px;
-      color: #94a3b8;
-      line-height: 1.5;
-    }
-
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 12px;
-      color: #64748b;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>DataRecoverX | Professional Data Recovery Ireland</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header>
+<header class="site-header">
   <h1>DataRecoverX</h1>
   <p>Professional Data Recovery • Ireland</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="request.html">Request Recovery</a>
+    <a href="shipping.html">Shipping</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
 </header>
 
-<div class="container">
-  <h2>Request Data Recovery</h2>
+<main class="container">
+  <h2>We help you get your files back — safely.</h2>
 
-  <div class="trust">
-    🔒 No Recovery, No Fee &nbsp;•&nbsp; 🇮🇪 Ireland-based &nbsp;•&nbsp; Secure Mail-In Service
-  </div>
+  <p>
+    DataRecoverX specialises in professional data recovery from
+    dead, damaged, liquid-exposed, and non-booting devices.
+    We operate a diagnostics-first, no-recovery-no-fee process.
+  </p>
 
-  <form action="https://formspree.io/f/xnjaapjl" method="POST">
+  <ul>
+    <li>✔ Secure mail-in service</li>
+    <li>✔ Ireland-based</li>
+    <li>✔ Board-level & logical recovery</li>
+    <li>✔ Privacy-first handling</li>
+  </ul>
 
-    <label>Your Name</label>
-    <input type="text" name="name" required>
-
-    <label>Email Address</label>
-    <input type="email" name="email" required>
-
-    <label>Phone Number (optional)</label>
-    <input type="text" name="phone">
-
-    <label>Device Type</label>
-    <select name="device_type" required>
-      <option value="">Select…</option>
-      <option>Laptop</option>
-      <option>Desktop</option>
-      <option>External Hard Drive</option>
-      <option>SSD</option>
-      <option>USB / Flash Drive</option>
-      <option>Memory Card</option>
-      <option>Other</option>
-    </select>
-
-    <label>Device Brand / Model</label>
-    <input type="text" name="device_model">
-
-    <label>Describe the Problem</label>
-    <textarea name="problem_description" required></textarea>
-
-    <input type="hidden" name="_subject" value="New DataRecoverX Recovery Request">
-    <input type="hidden" name="_captcha" value="false">
-
-    <button type="submit">Submit Recovery Request</button>
-  </form>
-
-  <div class="info">
-    <strong>How it works:</strong><br>
-    1. Submit this form (2–3 minutes)<br>
-    2. You’ll receive shipping instructions by email<br>
-    3. We perform diagnostics<br>
-    4. You approve the recovery plan & cost<br>
-    5. Data is recovered and securely returned
-    <br><br>
-    <strong>No Recovery, No Fee:</strong> You only pay if data is successfully recovered. Diagnostic and return-shipping policies are explained before work begins.
-  </div>
-</div>
+  <a class="button" href="request.html">Start a Recovery Request</a>
+</main>
 
 <footer>
-  © DataRecoverX • Ireland • Privacy-first data handling
+  <p>© DataRecoverX • Ireland</p>
 </footer>
 
 </body>
 </html>
+
+
 
 
 
