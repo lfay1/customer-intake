@@ -3,8 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <title>Request Data Recovery · DataRecoverX</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1220;
+      color: #e5e7eb;
+    }
+
+    header {
+      padding: 20px;
+      background: #050b18;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+    }
+
+    header p {
+      margin: 4px 0 10px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    nav a {
+      margin-right: 14px;
+      color: #cbd5f5;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 620px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #0f172a;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      font-size: 14px;
+      color: #cbd5f5;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 8px;
+      border: none;
+      background: #38bdf8;
+      color: #020617;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -25,69 +128,43 @@
   <div class="card">
 
     <h2>Request Data Recovery</h2>
-    <p>
-      Complete the form below to start the recovery process.
-      Diagnostics are performed before any recovery work.
+    <p class="intro">
+      Submit your device details below. We perform diagnostics first and
+      only proceed once recovery options are approved.
     </p>
 
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form action="https://formspree.io/f/xnjaapjl" method="POST">
 
-      <div class="form-grid">
+      <label>Full Name</label>
+      <input name="name" required>
 
-        <!-- NAME -->
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input id="name" name="name" required>
-        </div>
+      <label>Email Address</label>
+      <input type="email" name="email" required>
 
-        <!-- EMAIL -->
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input id="email" type="email" name="email" required>
-        </div>
+      <label>Phone Number (optional)</label>
+      <input name="phone">
 
-        <!-- PHONE -->
-        <div class="form-group">
-          <label for="phone">Phone Number (optional)</label>
-          <input id="phone" name="phone">
-        </div>
+      <label>Device Type</label>
+      <select name="device" required>
+        <option value="">Select device type</option>
+        <option>Phone</option>
+        <option>Laptop</option>
+        <option>Tablet</option>
+        <option>Hard Drive / SSD</option>
+        <option>USB / Memory Card</option>
+        <option>Other Storage Media</option>
+      </select>
 
-        <!-- DEVICE TYPE -->
-        <div class="form-group">
-          <label for="device">Device Type</label>
-          <select id="device" name="device" required>
-            <option value="">Select device type</option>
-            <option>Phone</option>
-            <option>Laptop</option>
-            <option>Tablet</option>
-            <option>Hard Drive / SSD</option>
-            <option>USB / Memory Card</option>
-            <option>Other Storage Media</option>
-          </select>
-        </div>
+      <label>Device Brand / Model</label>
+      <input name="model">
 
-        <!-- MODEL -->
-        <div class="form-group full">
-          <label for="model">Device Brand / Model</label>
-          <input id="model" name="model">
-        </div>
+      <label>Describe the Problem</label>
+      <textarea
+        name="issue"
+        placeholder="e.g. device not powering on, deleted files, liquid damage, corrupted storage..."
+        required></textarea>
 
-        <!-- ISSUE -->
-        <div class="form-group full">
-          <label for="issue">Describe the Problem</label>
-          <textarea
-            id="issue"
-            name="issue"
-            placeholder="e.g. device not powering on, deleted files, water damage, corrupted storage..."
-            required></textarea>
-        </div>
-
-      </div>
-
-      <!-- SUBMIT -->
-      <div class="form-submit">
-        <button type="submit">Submit Recovery Request</button>
-      </div>
+      <button type="submit">Submit Recovery Request</button>
 
     </form>
 
@@ -100,5 +177,6 @@
 
 </body>
 </html>
+
 
 
