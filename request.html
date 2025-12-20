@@ -2,57 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request Data Recovery | DataRecoverX</title>
+  <title>Request Data Recovery · DataRecoverX</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header>
-  <div class="container">
-    <h1>DataRecoverX</h1>
-    <p class="tagline">Professional Data Recovery • Ireland</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="request.html">Request Recovery</a>
-      <a href="shipping.html">Shipping</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </nav>
-  </div>
+  <h1>DataRecoverX</h1>
+  <p>Professional Data Recovery · Ireland</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="request.html">Request Recovery</a>
+    <a href="shipping.html">Shipping</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
 </header>
 
 <div class="container">
   <div class="card">
+
     <h2>Request Data Recovery</h2>
+    <p>
+      Complete the form below to start the recovery process.
+      Diagnostics are performed before any recovery work.
+    </p>
 
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="phone" placeholder="Phone Number (optional)">
 
-      <select name="device_type" required>
-        <option value="">Select Device Type</option>
-        <option>Phone</option>
-        <option>Laptop</option>
-        <option>External Drive</option>
-        <option>USB / SD Card</option>
-        <option>Other</option>
-      </select>
+      <div class="form-grid">
 
-      <input type="text" name="device_model" placeholder="Device Brand / Model">
-      <textarea name="problem" placeholder="Describe the problem" required></textarea>
+        <!-- NAME -->
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" required>
+        </div>
 
-      <button type="submit">Submit Request</button>
+        <!-- EMAIL -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" name="email" required>
+        </div>
+
+        <!-- PHONE -->
+        <div class="form-group">
+          <label for="phone">Phone Number (optional)</label>
+          <input id="phone" name="phone">
+        </div>
+
+        <!-- DEVICE TYPE -->
+        <div class="form-group">
+          <label for="device">Device Type</label>
+          <select id="device" name="device" required>
+            <option value="">Select device type</option>
+            <option>Phone</option>
+            <option>Laptop</option>
+            <option>Tablet</option>
+            <option>Hard Drive / SSD</option>
+            <option>USB / Memory Card</option>
+            <option>Other Storage Media</option>
+          </select>
+        </div>
+
+        <!-- MODEL -->
+        <div class="form-group full">
+          <label for="model">Device Brand / Model</label>
+          <input id="model" name="model">
+        </div>
+
+        <!-- ISSUE -->
+        <div class="form-group full">
+          <label for="issue">Describe the Problem</label>
+          <textarea
+            id="issue"
+            name="issue"
+            placeholder="e.g. device not powering on, deleted files, water damage, corrupted storage..."
+            required></textarea>
+        </div>
+
+      </div>
+
+      <!-- SUBMIT -->
+      <div class="form-submit">
+        <button type="submit">Submit Recovery Request</button>
+      </div>
+
     </form>
+
   </div>
 </div>
 
 <footer>
-  © DataRecoverX • Ireland
+  © DataRecoverX · Ireland
 </footer>
 
 </body>
