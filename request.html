@@ -4,70 +4,55 @@
   <meta charset="UTF-8">
   <title>Request Data Recovery | DataRecoverX</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Main site stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Page-specific styling -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #e5e7eb;
-      margin: 0;
+    .page-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
 
-    header {
-      padding: 20px 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+    .form-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    header h1 {
-      margin: 0;
+    .form-card h1 {
+      margin-top: 0;
+      margin-bottom: 10px;
       color: #38bdf8;
     }
 
-    nav a {
-      color: #e5e7eb;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: 500;
+    .form-card p {
+      color: #cbd5e1;
+      margin-bottom: 30px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      background: rgba(255,255,255,0.05);
-      padding: 30px;
-      border-radius: 10px;
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    form {
-      display: grid;
-      gap: 15px;
+    .form-group {
+      margin-bottom: 18px;
     }
 
     label {
-      font-size: 14px;
-      color: #cbd5f5;
-    }
-
-    input, select, textarea, button {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: none;
-      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #e5e7eb;
     }
 
     input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #334155;
       background: #0f172a;
       color: #e5e7eb;
-      border: 1px solid #334155;
+      font-size: 15px;
     }
 
     textarea {
@@ -76,11 +61,16 @@
     }
 
     button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
       background: #38bdf8;
       color: #0f172a;
-      font-weight: bold;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      margin-top: 10px;
     }
 
     button:hover {
@@ -89,18 +79,20 @@
 
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 13px;
+      margin-top: 50px;
       color: #94a3b8;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <h1>DataRecoverX</h1>
-  <p>Professional Data Recovery · Ireland 🇮🇪</p>
+  <div class="brand">DataRecoverX</div>
+  <div class="tagline">Professional Data Recovery • Ireland 🇮🇪</div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="request.html">Request Recovery</a>
@@ -112,45 +104,71 @@
   </nav>
 </header>
 
-<div class="container">
-  <h2>Request Data Recovery</h2>
-  <p>Please complete the form below. We’ll review your request and contact you with next steps.</p>
+<!-- MAIN CONTENT -->
+<main class="page-container">
 
-  <!-- ✅ CORRECT FORMSPREE ENDPOINT -->
-  <form action="https://formspree.io/f/xnjaapjl" method="POST">
+  <div class="form-card">
+    <h1>Request Data Recovery</h1>
+    <p>
+      Complete the form below to begin the data recovery process.
+      We operate a diagnostics-first, no-recovery-no-fee service.
+    </p>
 
-    <label>Your Name</label>
-    <input type="text" name="name" required>
+    <!-- ✅ WORKING FORMSPREE FORM -->
+    <form action="https://formspree.io/f/xnjaapjl" method="POST">
 
-    <label>Email Address</label>
-    <input type="email" name="email" required>
+      <!-- ✅ REDIRECT TO THANK YOU PAGE -->
+      <input type="hidden" name="_redirect" value="https://lfay1.github.io/customer-intake/thank-you.html">
 
-    <label>Phone Number (optional)</label>
-    <input type="tel" name="phone">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input id="name" type="text" name="name" required>
+      </div>
 
-    <label>Device Type</label>
-    <select name="device_type" required>
-      <option value="">Select device</option>
-      <option>Phone</option>
-      <option>Laptop</option>
-      <option>Tablet</option>
-      <option>External Drive</option>
-      <option>USB / Memory Card</option>
-      <option>Other Storage Media</option>
-    </select>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input id="email" type="email" name="email" required>
+      </div>
 
-    <label>Device Brand / Model</label>
-    <input type="text" name="device_model">
+      <div class="form-group">
+        <label for="phone">Phone Number (optional)</label>
+        <input id="phone" type="tel" name="phone">
+      </div>
 
-    <label>Describe the Problem</label>
-    <textarea name="message" required></textarea>
+      <div class="form-group">
+        <label for="device">Device Type</label>
+        <select id="device" name="device_type" required>
+          <option value="">Select device type</option>
+          <option>Mobile Phone</option>
+          <option>Laptop</option>
+          <option>Tablet</option>
+          <option>External Hard Drive / SSD</option>
+          <option>USB Flash Drive</option>
+          <option>SD / Memory Card</option>
+          <option>Other Storage Media</option>
+        </select>
+      </div>
 
-    <button type="submit">Submit Request</button>
-  </form>
-</div>
+      <div class="form-group">
+        <label for="model">Device Brand / Model</label>
+        <input id="model" type="text" name="device_model">
+      </div>
 
+      <div class="form-group">
+        <label for="issue">Describe the Problem</label>
+        <textarea id="issue" name="issue_description" required></textarea>
+      </div>
+
+      <button type="submit">Submit Recovery Request</button>
+
+    </form>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
-  © DataRecoverX · Ireland
+  © DataRecoverX • Ireland
 </footer>
 
 </body>
