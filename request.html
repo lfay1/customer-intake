@@ -1,175 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Request Data Recovery | DataRecoverX</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Main site stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
-
-  <!-- Page-specific styling -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request Service | DataRecoverX</title>
   <style>
-    .page-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 20px;
+    :root{
+      --bg:#f7f9fc; --card:#ffffff; --text:#0f172a; --muted:#475569;
+      --brand:#2563eb; --border:#e2e8f0; --danger:#dc2626;
     }
-
-    .form-card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 12px;
-      padding: 35px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    header{background:var(--card);border-bottom:1px solid var(--border)}
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    nav a{color:var(--muted);text-decoration:none;margin-right:14px;font-weight:600}
+    nav a:hover{color:var(--brand)}
+    h1{margin:18px 0 6px;font-size:30px}
+    p{margin:0 0 12px;color:var(--muted);line-height:1.5}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-top:14px}
+    label{display:block;font-weight:700;margin-top:12px}
+    input,select,textarea{
+      width:100%;padding:10px 12px;margin-top:6px;border:1px solid var(--border);
+      border-radius:10px;font-size:15px;background:white;color:var(--text)
     }
-
-    .form-card h1 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: #38bdf8;
+    textarea{min-height:110px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:760px){ .row{grid-template-columns:1fr} }
+    .btn{
+      display:inline-block;margin-top:14px;background:var(--brand);color:white;
+      padding:11px 14px;border-radius:10px;border:none;font-weight:800;cursor:pointer
     }
-
-    .form-card p {
-      color: #cbd5e1;
-      margin-bottom: 30px;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #334155;
-      background: #0f172a;
-      color: #e5e7eb;
-      font-size: 15px;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 14px;
-      background: #38bdf8;
-      color: #0f172a;
-      font-size: 16px;
-      font-weight: 700;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0ea5e9;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      color: #94a3b8;
-      font-size: 14px;
-    }
+    .btn:hover{filter:brightness(0.95)}
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+    .warn{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:10px 12px;border-radius:10px;margin-top:12px}
+    footer{margin-top:26px;border-top:1px solid var(--border);background:var(--card)}
+    footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+    small{color:var(--muted)}
   </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="brand">DataRecoverX</div>
-  <div class="tagline">Professional Data Recovery • Ireland 🇮🇪</div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="request.html">Request Recovery</a>
-    <a href="shipping.html">Shipping</a>
-    <a href="faq.html">FAQ</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-  </nav>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+      <div style="font-weight:900;color:var(--brand);font-size:18px;">DataRecoverX</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="request.html" style="color:var(--brand);">Request Service</a>
+        <a href="vhs-transfer.html">VHS Transfer</a>
+      </nav>
+    </div>
+  </div>
 </header>
 
-<!-- MAIN CONTENT -->
-<main class="page-container">
+<main class="wrap">
+  <h1>Request a Service</h1>
+  <p>Mail-in or drop-off (Ireland). Fill this in and we’ll reply with the next steps.</p>
 
-  <div class="form-card">
-    <h1>Request Data Recovery</h1>
-    <p>
-      Complete the form below to begin the data recovery process.
-      We operate a diagnostics-first, no-recovery-no-fee service.
-    </p>
-
-    <!-- ✅ WORKING FORMSPREE FORM -->
-    <form action="https://formspree.io/f/xnjaapjl" method="POST">
-
-      <!-- ✅ REDIRECT TO THANK YOU PAGE -->
-      <input type="hidden" name="_redirect" value="https://lfay1.github.io/customer-intake/thank-you.html">
-
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input id="name" type="text" name="name" required>
+  <div class="card">
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <div class="row">
+        <div>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input id="email" type="email" name="email" required>
+      <div class="row">
+        <div>
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" />
+        </div>
+        <div>
+          <label for="service">Service Type</label>
+          <select id="service" name="service" required>
+            <option value="data-recovery">Data Recovery (Phone/Laptop/Storage)</option>
+            <option value="vhs-transfer">VHS / Video Cassette → MP4</option>
+          </select>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="phone">Phone Number (optional)</label>
-        <input id="phone" type="tel" name="phone">
+      <label for="device">Device / Media Details</label>
+      <input id="device" name="device" placeholder="Example: iPhone 12, MacBook Air 2020, Seagate 2TB, VHS tape" required />
+
+      <div class="row">
+        <div>
+          <label for="issue">Problem / Request</label>
+          <textarea id="issue" name="issue" placeholder="Describe what happened, symptoms, and what you need back." required></textarea>
+        </div>
+        <div>
+          <label for="vhs_count">VHS Tape Count (only for VHS)</label>
+          <input id="vhs_count" name="vhs_tape_count" type="number" min="0" placeholder="Example: 6" />
+          <div class="note">If you’re requesting VHS conversion, enter how many tapes you have.</div>
+
+          <label for="return_media">Return Method</label>
+          <select id="return_media" name="return_method">
+            <option value="mail-in">Mail-In</option>
+            <option value="drop-off">Drop-Off</option>
+          </select>
+
+          <div class="warn">
+            <strong>Tip:</strong> For water-damaged devices, do not charge or power on before sending.
+          </div>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="device">Device Type</label>
-        <select id="device" name="device_type" required>
-          <option value="">Select device type</option>
-          <option>Mobile Phone</option>
-          <option>Laptop</option>
-          <option>Tablet</option>
-          <option>External Hard Drive / SSD</option>
-          <option>USB Flash Drive</option>
-          <option>SD / Memory Card</option>
-          <option>Other Storage Media</option>
-        </select>
+      <label>
+        <input type="checkbox" required />
+        I confirm I am the device/media owner (or authorised) and I agree to be contacted about this request.
+      </label>
+
+      <button class="btn" type="submit">Submit Request</button>
+
+      <div class="note">
+        After submission, you’ll receive shipping/drop-off instructions by email.
       </div>
-
-      <div class="form-group">
-        <label for="model">Device Brand / Model</label>
-        <input id="model" type="text" name="device_model">
-      </div>
-
-      <div class="form-group">
-        <label for="issue">Describe the Problem</label>
-        <textarea id="issue" name="issue_description" required></textarea>
-      </div>
-
-      <button type="submit">Submit Recovery Request</button>
-
     </form>
   </div>
-
 </main>
 
-<!-- FOOTER -->
 <footer>
-  © DataRecoverX • Ireland
+  <div class="wrap">
+    <small>© <span id="y"></span> DataRecoverX • Ireland</small>
+    <small><a href="vhs-transfer.html" style="color:var(--brand);text-decoration:none;font-weight:700;">VHS Transfer</a></small>
+  </div>
 </footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Optional: allow vhs-transfer.html button to pre-select VHS
+  // request.html#service=vhs
+  const hash = window.location.hash || "";
+  if (hash.includes("service=vhs")) {
+    const sel = document.getElementById("service");
+    if (sel) sel.value = "vhs-transfer";
+  }
+</script>
 
 </body>
 </html>
+
