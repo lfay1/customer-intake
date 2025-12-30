@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VHS to Digital Transfer | DataRecoverX</title>
+  <style>
+    :root{
+      --bg:#f7f9fc; --card:#ffffff; --text:#0f172a; --muted:#475569;
+      --brand:#2563eb; --border:#e2e8f0;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    header{background:var(--card);border-bottom:1px solid var(--border)}
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    nav a{color:var(--muted);text-decoration:none;margin-right:14px;font-weight:600}
+    nav a:hover{color:var(--brand)}
+    .hero{padding:26px 0}
+    h1{margin:0 0 10px;font-size:34px}
+    p{margin:0 0 12px;color:var(--muted);line-height:1.5}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+    .card h3{margin:0 0 8px}
+    .badge{display:inline-block;background:#e0e7ff;color:#1e40af;font-weight:700;padding:6px 10px;border-radius:999px;font-size:12px}
+    .btn{display:inline-block;margin-top:10px;background:var(--brand);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn:hover{filter:brightness(0.95)}
+    ul{margin:10px 0 0 18px;color:var(--muted)}
+    footer{margin-top:26px;border-top:1px solid var(--border);background:var(--card)}
+    footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+    small{color:var(--muted)}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+      <div style="font-weight:900;color:var(--brand);font-size:18px;">DataRecoverX</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="request.html">Request Service</a>
+        <a href="vhs-transfer.html" aria-current="page" style="color:var(--brand);">VHS Transfer</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="badge">Ireland • Mail-In & Drop-Off</span>
+    <h1>VHS / Video Cassette to Digital (MP4)</h1>
+    <p>We convert VHS tapes to digital files you can store on USB, hard drive, or cloud. Great for family archives, weddings, and old home videos.</p>
+    <a class="btn" href="request.html#service=vhs">Request VHS Transfer</a>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3>What we can convert</h3>
+      <ul>
+        <li>VHS video cassette tapes</li>
+        <li>Standard-definition analog captures</li>
+        <li>Multiple tapes / bulk jobs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>What you receive</h3>
+      <ul>
+        <li>MP4 video files</li>
+        <li>Optional: USB stick / external drive</li>
+        <li>Optional: simple trim (start/end)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>How it works</h3>
+      <ul>
+        <li>Submit request (tape count + notes)</li>
+        <li>Post or drop-off your tapes</li>
+        <li>We convert + quality-check</li>
+        <li>You receive MP4 files</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Optional enhancement</h3>
+      <p>We can optionally enhance the output with stabilisation, denoise, and contrast improvements (results vary by tape quality).</p>
+      <p><strong>Tip:</strong> Enhancement is best as an add-on after a test clip.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <small>© <span id="y"></span> DataRecoverX • Ireland</small>
+    <small><a href="request.html" style="color:var(--brand);text-decoration:none;font-weight:700;">Request Service</a></small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
